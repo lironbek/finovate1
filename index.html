@@ -1,0 +1,234 @@
+<html><head><base href="https://econo-survey.co.il/"><title>סקר התייעלות כלכלית משפחתית - פינובייט</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  background-color: #e6f2ff;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+h1 {
+  color: #2c3e50;
+  text-align: center;
+}
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.logo img {
+  max-width: 200px;
+  height: auto;
+}
+form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+input[type="text"], input[type="number"], select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+input[type="submit"] {
+  background-color: #25D366;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+input[type="submit"]:hover {
+  background-color: #128C7E;
+}
+.question {
+  margin-bottom: 20px;
+}
+.whatsapp-button {
+  background-color: #25D366;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+.whatsapp-button:hover {
+  background-color: #128C7E;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="logo">
+    <img src="https://finovate.co.il/wp-content/uploads/2024/03/Color-logo-no-background.svg" alt="לוגו פינובייט" width="200" height="100">
+  </div>
+  <h1>סקר התייעלות כלכלית משפחתית</h1>
+  <form id="survey-form">
+    <div class="question">
+      <label for="income">מה ההכנסה החודשית הכוללת של המשפחה?</label>
+      <input type="number" id="income" name="income" required>
+    </div>
+    
+    <div class="question">
+      <label for="expenses">מהן ההוצאות החודשיות הקבועות שלכם? (שכירות/משכנתא, חשבונות, מזון וכו')</label>
+      <textarea id="expenses" name="expenses" rows="4" required></textarea>
+    </div>
+    
+    <div class="question">
+      <label for="savings">האם יש לכם חסכונות? אם כן, כמה?</label>
+      <input type="number" id="savings" name="savings">
+    </div>
+    
+    <div class="question">
+      <label for="debt">האם יש לכם חובות? אם כן, מה סכומם הכולל?</label>
+      <input type="number" id="debt" name="debt">
+    </div>
+    
+    <div class="question">
+      <label for="budget">האם אתם מנהלים תקציב חודשי?</label>
+      <select id="budget" name="budget" required>
+        <option value="">בחר/י תשובה</option>
+        <option value="yes">כן</option>
+        <option value="no">לא</option>
+        <option value="sometimes">לפעמים</option>
+      </select>
+    </div>
+    
+    <div class="question">
+      <label for="goals">מהן המטרות הכלכליות שלכם לטווח הקצר והארוך?</label>
+      <textarea id="goals" name="goals" rows="4" required></textarea>
+    </div>
+    
+    <div class="question">
+      <label for="challenges">מהם האתגרים הכלכליים העיקריים שאתם מתמודדים איתם?</label>
+      <textarea id="challenges" name="challenges" rows="4" required></textarea>
+    </div>
+    
+    <div class="question">
+      <label for="habits">האם יש הרגלי צריכה שאתם מרגישים שצריך לשנות?</label>
+      <textarea id="habits" name="habits" rows="4"></textarea>
+    </div>
+    
+    <div class="question">
+      <label for="investment">האם אתם משקיעים כסף? אם כן, באילו אפיקים?</label>
+      <textarea id="investment" name="investment" rows="4"></textarea>
+    </div>
+    
+    <div class="question">
+      <label for="assistance">האם הייתם מעוניינים בייעוץ כלכלי מקצועי?</label>
+      <select id="assistance" name="assistance" required>
+        <option value="">בחר/י תשובה</option>
+        <option value="yes">כן</option>
+        <option value="no">לא</option>
+        <option value="maybe">אולי</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <label for="cars">כמה רכבים יש במשפחה?</label>
+      <input type="number" id="cars" name="cars" min="0" required>
+    </div>
+
+    <div class="question">
+      <label for="car_expenses">מהן ההוצאות החודשיות הממוצעות על הרכב/ים? (דלק, ביטוח, טיפולים וכו')</label>
+      <input type="number" id="car_expenses" name="car_expenses" required>
+    </div>
+
+    <div class="question">
+      <label for="car_necessity">האם הרכב/ים הכרחיים לצרכי המשפחה?</label>
+      <select id="car_necessity" name="car_necessity" required>
+        <option value="">בחר/י תשובה</option>
+        <option value="yes">כן, הכרחי</option>
+        <option value="partial">חלקית</option>
+        <option value="no">לא הכרחי</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <label for="food_expenses">כמה לדעתכם אתם מוציאים בחודש על מזון?</label>
+      <input type="number" id="food_expenses" name="food_expenses" required>
+    </div>
+
+    <div class="question">
+      <label for="housing_expenses">כמה לדעתכם אתם מוציאים בחודש על דיור? (כולל משכנתא/שכירות, ארנונה, ועד בית וכו')</label>
+      <input type="number" id="housing_expenses" name="housing_expenses" required>
+    </div>
+
+    <div class="question">
+      <label for="utilities_expenses">כמה לדעתכם אתם מוציאים בחודש על חשבונות? (חשמל, מים, גז, אינטרנט וכו')</label>
+      <input type="number" id="utilities_expenses" name="utilities_expenses" required>
+    </div>
+
+    <div class="question">
+      <label for="entertainment_expenses">כמה לדעתכם אתם מוציאים בחודש על בילויים ופנאי?</label>
+      <input type="number" id="entertainment_expenses" name="entertainment_expenses" required>
+    </div>
+
+    <div class="question">
+      <label for="education_expenses">כמה לדעתכם אתם מוציאים בחודש על חינוך? (כולל שכר לימוד, ספרים, חוגים וכו')</label>
+      <input type="number" id="education_expenses" name="education_expenses" required>
+    </div>
+
+    <div class="question">
+      <label for="health_expenses">כמה לדעתכם אתם מוציאים בחודש על בריאות? (כולל ביטוחים, תרופות, טיפולים וכו')</label>
+      <input type="number" id="health_expenses" name="health_expenses" required>
+    </div>
+    
+    <input type="submit" value="שלח/י שאלון">
+  </form>
+  <a href="#" id="whatsapp-link" class="whatsapp-button">שלח/י את הסקר בוואטסאפ</a>
+</div>
+
+<script>
+document.getElementById('survey-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  sendWhatsApp();
+});
+
+document.getElementById('whatsapp-link').addEventListener('click', function(e) {
+  e.preventDefault();
+  sendWhatsApp();
+});
+
+function sendWhatsApp() {
+  let message = "תוצאות הסקר:\n\n";
+  const form = document.getElementById('survey-form');
+  const formData = new FormData(form);
+  
+  for (let [key, value] of formData.entries()) {
+    message += `${key}: ${value}\n`;
+  }
+  
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappUrl = `https://wa.me/972507612220?text=${encodedMessage}`;
+  
+  window.open(whatsappUrl, '_blank');
+}
+</script>
+
+</body></html>
